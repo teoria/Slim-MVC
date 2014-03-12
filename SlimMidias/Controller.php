@@ -1,17 +1,18 @@
 <?php
 
-namespace NetTuts;
-
 Class Controller extends \Slim\Slim
 {
 	protected $data;
 
 	public function __construct()
 	{
-		$settings = require("../settings.php");
-		if (isset($settings['model'])) {
-			$this->data = $settings['model'];
-		}
+
+        $settings = array(
+            'view' => new \Slim\Views\Twig(),
+            'debug' => false,
+            'templates.path' => '../views'
+
+        );
 
 		parent::__construct($settings);
 	}

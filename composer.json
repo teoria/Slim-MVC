@@ -1,14 +1,21 @@
 {
-	"name": "nettuts/slim-mvc",
+	"name": "midiasEducativas/slim-mvc",
 	"require": {
-		"slim/slim": "*",
-		"slim/extras": "*",
-		"twig/twig": "*"
+		"slim/slim": "2.4.2",
+        "slim/views": "0.1.*",
+		"twig/twig": "v1.15.1"
 	},
 	"autoload": {
 		"psr-0": {
-			"NetTuts": "vendor/",
 			"Controller": "./"
-		}
+		},
+        "classmap":[
+            "controller",
+            "model",
+            "slimMidias"
+        ]
+
+
+
 	}
 }

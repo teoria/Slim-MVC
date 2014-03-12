@@ -1,19 +1,27 @@
 <?php
 
+
+
+
 require ("../vendor/autoload.php");
 
-$router = new \NetTuts\Router;
+
+$router = new Router();
 
 $routes = array(
 	'/' => '',
-	'/test/:title' => "Main:test@get",
-	
-	array('/arr', "Main:index@get"),
-	
+
+	'/login' => "LoginController:logaUsuario@post",
+	'/loginfb' => "LoginController:logaUsuarioFB@post",
+
+	'/cadastrauser'=> "CadastroController:cadastraUsuario@post",
+
 	'/demo' => array(
 		"get" => "Main:test2",
 		"post" => "Main:test3"
-	)
+	),
+
+    '/p'=>"Pessoa:index",
 );
 
 $router->addRoutes($routes);
